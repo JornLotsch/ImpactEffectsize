@@ -29,10 +29,15 @@ Impact <- function(Data, Cls, PlotIt = FALSE, pde = TRUE, col = c("red", "blue")
   CTDiff <- NA
   GMDdata <- NA
   
-  if (var(Data) == 0 |
-      suppressWarnings(ks.test(Data[Cls == UniqueCls[1]], Data[Cls == UniqueCls[2]])$p.value) >= 0.05)
+  KStry <- try(suppressWarnings(ks.test(Data[Cls == UniqueCls[1]], Data[Cls == UniqueCls[2]])), TRUE)
+  if (class(KStry) != "try-error") {
+    KSpval <- KStry$p.value
+  } else KSpval <- 1
+  
+  if (var(Data) == 0 | KSpval >= 0.05)
+  {
     ImpactX2X1 = 0
-  else {
+  } else {
     MedianCls1 <- c_median(Data[Cls == UniqueCls[1]])
     MedianCls2 <- c_median(Data[Cls == UniqueCls[2]])
     DeltaM <- MedianCls2 -  MedianCls1
