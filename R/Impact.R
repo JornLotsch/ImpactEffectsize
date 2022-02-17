@@ -18,7 +18,7 @@ Impact <- function(Data, Cls, PlotIt = FALSE, pde = TRUE, col = c("red", "blue")
     Cls <- Cls[which(!is.na(Data))]
     Data <- Data[which(!is.na(Data))]
   }
-  if (hasArg("PlotIt") == TRUE & PlotIt == TRUE)
+  if (PlotIt == TRUE)
     plot2Densities(Data, Cls, ...)
   
   DirCT <- 1
@@ -32,7 +32,9 @@ Impact <- function(Data, Cls, PlotIt = FALSE, pde = TRUE, col = c("red", "blue")
   KStry <- try(suppressWarnings(ks.test(Data[Cls == UniqueCls[1]], Data[Cls == UniqueCls[2]])), TRUE)
   if (class(KStry) != "try-error") {
     KSpval <- KStry$p.value
-  } else KSpval <- 1
+  } else {
+    KSpval <- 1
+  }
   
   if (var(Data) == 0 | KSpval >= 0.05)
   {
