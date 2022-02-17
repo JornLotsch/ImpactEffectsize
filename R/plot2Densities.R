@@ -26,7 +26,7 @@ plot2Densities <- function(Data, Cls, col = c("red", "blue"), pde = TRUE, meanLi
       pde <- FALSE
     }
   }
-  if (class(pdeX1Try) == "try-error" | class(pdeX2Try) == "try-error") {
+  if (class(pdeX1Try) == "try-error" || class(pdeX2Try) == "try-error") {
     message("Pareto density estimation failed. Reverting to standard pdf.")
     pde <- FALSE
   }

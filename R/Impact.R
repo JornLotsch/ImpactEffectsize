@@ -36,8 +36,7 @@ Impact <- function(Data, Cls, PlotIt = FALSE, pde = TRUE, col = c("red", "blue")
     KSpval <- 1
   }
   
-  if (var(Data) == 0 | KSpval >= 0.05)
-  {
+  if (var(Data) == 0 || KSpval >= 0.05) {
     ImpactX2X1 = 0
   } else {
     MedianCls1 <- c_median(Data[Cls == UniqueCls[1]])
