@@ -1,6 +1,4 @@
-citHeader("To cite ImpactEffectsize in publications use:")
-
-citEntry(entry = "Article",
+bibentry(bibtype    = "Article",
          title        = "A non-parametric effect-size measure capturing changes in central tendency and data distribution shape",
          author       = personList(as.person("Jorn Lotsch"),
                                    as.person("Alfred Ultsch")),
