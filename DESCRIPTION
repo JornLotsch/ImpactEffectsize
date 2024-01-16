@@ -6,9 +6,9 @@ Version: 0.6.3
 Date: 2024-01-16
 URL: https://cran.r-project.org/package=ImpactEffectsize
 Encoding: UTF-8
-Author: Jorn Lotsch [aut,cre] (<https://orcid.org/0000-0002-5818-6958>),
+Author: Joern Loetsch [aut,cre] (<https://orcid.org/0000-0002-5818-6958>),
   Alfred Ultsch [aut] (<https://orcid.org/0000-0002-7845-3283>)
-Maintainer: Jorn Lotsch <j.lotsch@em.uni-frankfurt.de>
+Maintainer: Jorn Lotsch <j.loetsch@em.uni-frankfurt.de>
 LazyData: true
 Imports: caTools, matrixStats, parallelDist, methods, stats, graphics, Rcpp
 Suggests: testthat
