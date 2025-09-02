@@ -4,4 +4,4 @@
 ^.*\.ipynb
 ^.*\.Rproj$
 ^\.idea
-
+README.md

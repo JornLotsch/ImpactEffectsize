@@ -36,10 +36,13 @@ For more information, visit the CRAN package page: [https://cran.r-project.org/p
 ## Dependencies
 
 The package requires:
-- `caTools` (for numerical integration)
+- `parallelDist` (for pairwise distance computation)
+- `graphics` (for plotting)
 - `methods` (for argument checking)
 - `matrixStats` (for matrix operations)
 - `stats` (for statistical functions)
+- `withr` (for seed handling)
+- `Rcpp` (for C++ integration)
 
 ## Quick start
 
@@ -87,6 +90,7 @@ result <- Impact(Data, Cls, PlotIt = FALSE, pde = TRUE, col = c("red", "blue"), 
 | `Impact` | numeric | The main Impact effect size measure |
 | `CTDiff` | numeric | Central tendency difference component |
 | `MorphDiff` | numeric | Morphological difference component |
+| `density_df` | data frame |  columns: PDEKernels, pde_Cls1, pde_Cls2 (empty if no density estimation was possible) |
 
 ## Examples
 
